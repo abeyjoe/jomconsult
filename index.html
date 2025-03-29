@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,50 +16,64 @@
             --light-gray: #f5f5f5;
             --dark-gray: #333333;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             line-height: 1.6;
             color: var(--dark-gray);
             overflow-x: hidden;
         }
-        
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
-        
+
         /* Animation Keyframes */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         @keyframes fadeInUp {
-            from { 
+            from {
                 opacity: 0;
                 transform: translateY(30px);
             }
-            to { 
+
+            to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
-        
+
         /* Header Styles */
         header {
             background-color: var(--white);
@@ -68,33 +83,33 @@
             z-index: 1000;
             animation: fadeIn 0.8s ease-out;
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
         }
-        
+
         .logo {
             font-size: 24px;
             font-weight: bold;
             color: var(--primary-blue);
         }
-        
+
         .logo span {
             color: var(--accent-yellow);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li {
             margin-left: 30px;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: var(--secondary-blue);
@@ -102,7 +117,7 @@
             transition: color 0.3s;
             position: relative;
         }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -113,11 +128,11 @@
             background-color: var(--accent-yellow);
             transition: width 0.3s ease;
         }
-        
+
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+
         .cta-button {
             background-color: var(--accent-yellow);
             color: var(--secondary-blue);
@@ -126,20 +141,20 @@
             font-weight: bold;
             transition: all 0.3s;
         }
-        
+
         .cta-button:hover {
             background-color: #e6c200;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
         }
-        
+
         /* Hero Slider */
         .hero-slider {
             position: relative;
             height: 100vh;
             overflow: hidden;
         }
-        
+
         .slide {
             position: absolute;
             top: 0;
@@ -157,31 +172,31 @@
             color: var(--white);
             padding: 0 20px;
         }
-        
+
         .slide.active {
             opacity: 1;
         }
-        
+
         .slide-content {
             max-width: 800px;
             background-color: rgba(0, 51, 102, 0.8);
             padding: 40px;
             border-radius: 10px;
         }
-        
+
         .slide h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             animation: fadeInUp 1s ease-out;
         }
-        
+
         .slide p {
             font-size: 1.2rem;
             margin-bottom: 30px;
             animation: fadeInUp 1s ease-out 0.3s forwards;
             opacity: 0;
         }
-        
+
         .hero-buttons {
             display: flex;
             justify-content: center;
@@ -189,7 +204,7 @@
             animation: fadeInUp 1s ease-out 0.6s forwards;
             opacity: 0;
         }
-        
+
         .btn {
             padding: 12px 30px;
             border-radius: 5px;
@@ -197,29 +212,29 @@
             font-weight: bold;
             transition: all 0.3s;
         }
-        
+
         .primary-btn {
             background-color: var(--accent-yellow);
             color: var(--secondary-blue);
         }
-        
+
         .secondary-btn {
             background-color: transparent;
             border: 2px solid var(--white);
             color: var(--white);
         }
-        
+
         .primary-btn:hover {
             background-color: #e6c200;
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         .secondary-btn:hover {
             background-color: rgba(255, 255, 255, 0.1);
             transform: translateY(-3px);
         }
-        
+
         .slider-nav {
             position: absolute;
             bottom: 30px;
@@ -229,7 +244,7 @@
             gap: 10px;
             z-index: 10;
         }
-        
+
         .slider-dot {
             width: 12px;
             height: 12px;
@@ -238,40 +253,40 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        
+
         .slider-dot.active {
             background-color: var(--accent-yellow);
         }
-        
+
         /* Services Section */
         .services {
             padding: 80px 0;
             background-color: var(--white);
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 50px;
         }
-        
+
         .section-title h2 {
             font-size: 36px;
             color: var(--secondary-blue);
             margin-bottom: 15px;
         }
-        
+
         .section-title p {
             color: var(--dark-gray);
             max-width: 700px;
             margin: 0 auto;
         }
-        
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
+
         .service-card {
             background-color: var(--light-gray);
             border-radius: 8px;
@@ -280,98 +295,168 @@
             opacity: 0;
             transform: translateY(30px);
         }
-        
+
         .service-card.animate {
             animation: fadeInUp 0.8s ease-out forwards;
         }
-        
-        .service-card:nth-child(1).animate { animation-delay: 0.2s; }
-        .service-card:nth-child(2).animate { animation-delay: 0.4s; }
-        .service-card:nth-child(3).animate { animation-delay: 0.6s; }
-        .service-card:nth-child(4).animate { animation-delay: 0.8s; }
-        .service-card:nth-child(5).animate { animation-delay: 1s; }
-        
+
+        .service-card:nth-child(1).animate {
+            animation-delay: 0.2s;
+        }
+
+        .service-card:nth-child(2).animate {
+            animation-delay: 0.4s;
+        }
+
+        .service-card:nth-child(3).animate {
+            animation-delay: 0.6s;
+        }
+
+        .service-card:nth-child(4).animate {
+            animation-delay: 0.8s;
+        }
+
+        .service-card:nth-child(5).animate {
+            animation-delay: 1s;
+        }
+
         .service-card:hover {
             transform: translateY(-10px) !important;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         .service-icon {
             font-size: 40px;
             color: var(--primary-blue);
             margin-bottom: 20px;
             transition: transform 0.3s;
         }
-        
+
         .service-card:hover .service-icon {
             transform: scale(1.2);
         }
-        
+
         .service-card h3 {
             color: var(--secondary-blue);
             margin-bottom: 15px;
         }
-        
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background-color: var(--light-gray);
+
+        /* About Section - Responsive */
+.about {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 600px;
+    order: 1; /* Image comes after text on mobile */
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.about-image.animate {
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+.about-text {
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.about-text.animate {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: var(--secondary-blue);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+    .about {
+        padding: 80px 0;
+    }
+    
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .about-image {
+        flex: 1;
+        order: 2; /* Image on right side on desktop */
+    }
+    
+    .about-text {
+        flex: 1;
+        order: 1; /* Text on left side on desktop */
+    }
+    
+    .about-text h2 {
+        font-size: 2.25rem;
+        text-align: left;
+    }
+    
+    .about-text p {
+        text-align: left;
+    }
+}
+
+/* Small Mobile Adjustments */
+@media (max-width: 480px) {
+    .about-text h2 {
+        font-size: 1.75rem;
+    }
+    
+    .about {
+        padding: 40px 0;
+    }
+    
+    .about-content {
+        gap: 30px;
+    }
+}
+
+        /* Adjustments for very small screens */
+        @media (max-width: 480px) {
+            .about-text h2 {
+                font-size: 1.75rem;
+            }
+
+            .about-text p {
+                font-size: 0.95rem;
+            }
         }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .about-text h2 {
-            font-size: 36px;
-            color: var(--secondary-blue);
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateX(-30px);
-        }
-        
-        .about-text.animate h2 {
-            animation: fadeIn 0.8s ease-out 0.2s forwards;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateX(-30px);
-        }
-        
-        .about-text.animate p {
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-        
-        .about-text p:nth-child(2) { animation-delay: 0.4s; }
-        .about-text p:nth-child(3) { animation-delay: 0.6s; }
-        .about-text p:nth-child(4) { animation-delay: 0.8s; }
-        
-        .about-image {
-            position: relative;
-            opacity: 0;
-            transform: translateX(30px);
-        }
-        
-        .about-image.animate {
-            animation: fadeIn 0.8s ease-out 0.4s forwards;
-        }
-        
-        .about-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s;
-        }
-        
-        .about-image:hover img {
-            transform: scale(1.03);
-        }
-        
+
         /* CTA Section */
         .cta {
             background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
@@ -379,18 +464,18 @@
             padding: 80px 0;
             text-align: center;
         }
-        
+
         .cta h2 {
             font-size: 36px;
             margin-bottom: 20px;
             opacity: 0;
             transform: translateY(30px);
         }
-        
+
         .cta.animate h2 {
             animation: fadeInUp 0.8s ease-out forwards;
         }
-        
+
         .cta p {
             max-width: 700px;
             margin: 0 auto 30px;
@@ -398,20 +483,20 @@
             opacity: 0;
             transform: translateY(30px);
         }
-        
+
         .cta.animate p {
             animation: fadeInUp 0.8s ease-out 0.2s forwards;
         }
-        
+
         .cta .btn {
             opacity: 0;
             transform: translateY(30px);
         }
-        
+
         .cta.animate .btn {
             animation: fadeInUp 0.8s ease-out 0.4s forwards;
         }
-        
+
         /* Back to Top Button */
         .back-to-top {
             position: fixed;
@@ -433,66 +518,74 @@
             transition: all 0.3s;
             z-index: 999;
         }
-        
+
         .back-to-top.visible {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .back-to-top:hover {
             background-color: var(--secondary-blue);
             color: var(--accent-yellow);
             transform: translateY(-5px);
         }
-        
+
         /* Footer */
         footer {
             background-color: var(--secondary-blue);
             color: var(--white);
             padding: 50px 0 20px;
         }
-        
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
-        
+
         .footer-column {
             opacity: 0;
             transform: translateY(30px);
         }
-        
+
         footer.animate .footer-column {
             animation: fadeInUp 0.8s ease-out forwards;
         }
-        
-        footer.animate .footer-column:nth-child(1) { animation-delay: 0.2s; }
-        footer.animate .footer-column:nth-child(2) { animation-delay: 0.4s; }
-        footer.animate .footer-column:nth-child(3) { animation-delay: 0.6s; }
-        
+
+        footer.animate .footer-column:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        footer.animate .footer-column:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        footer.animate .footer-column:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
         .footer-column h3 {
             font-size: 20px;
             margin-bottom: 20px;
             color: var(--accent-yellow);
         }
-        
+
         .footer-column ul {
             list-style: none;
         }
-        
+
         .footer-column ul li {
             margin-bottom: 10px;
         }
-        
+
         .footer-column a {
             color: var(--white);
             text-decoration: none;
             transition: color 0.3s;
             position: relative;
         }
-        
+
         .footer-column a::after {
             content: '';
             position: absolute;
@@ -503,64 +596,65 @@
             background-color: var(--accent-yellow);
             transition: width 0.3s ease;
         }
-        
+
         .footer-column a:hover::after {
             width: 100%;
         }
-        
+
         .contact-info {
             margin-top: 15px;
         }
-        
+
         .contact-info p {
             margin-bottom: 10px;
             display: flex;
             align-items: center;
         }
-        
+
         .contact-info i {
             margin-right: 10px;
             color: var(--accent-yellow);
         }
-        
+
         .copyright {
             text-align: center;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             .hero-slider {
                 height: 80vh;
             }
-            
+
             .slide h1 {
                 font-size: 1.8rem;
             }
-            
+
             .slide p {
                 font-size: 1rem;
             }
-            
+
             .slide-content {
                 padding: 20px;
             }
-            
+
             .about-content {
                 grid-template-columns: 1fr;
             }
-            
+
             .about-image {
                 order: -1;
             }
-            
+
             .nav-links {
                 display: none;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop">↑</a>
@@ -583,65 +677,75 @@
     <!-- Hero Slider -->
     <section class="hero-slider">
         <!-- Slide 1: Data Analytics -->
-        <div class="slide active" style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="slide active"
+            style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
             <div class="slide-content">
                 <h1>Data Analytics & Business Intelligence</h1>
-                <p>Harness the power of data with our analytical insights that improve efficiency, predict trends, and optimize performance for your organization.</p>
+                <p>Harness the power of data with our analytical insights that improve efficiency, predict trends, and
+                    optimize performance for your organization.</p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn primary-btn">Learn More</a>
                     <a href="#contact" class="btn secondary-btn">Get Started</a>
                 </div>
             </div>
         </div>
-        
+
         <!-- Slide 2: Geospatial Analysis -->
-        <div class="slide" style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="slide"
+            style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
             <div class="slide-content">
                 <h1>Geospatial Analysis & Environmental Research</h1>
-                <p>Gain critical insights for environmental research, urban planning, and resource management using our advanced GIS and remote sensing technologies.</p>
+                <p>Gain critical insights for environmental research, urban planning, and resource management using our
+                    advanced GIS and remote sensing technologies.</p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn primary-btn">Learn More</a>
                     <a href="#contact" class="btn secondary-btn">Get Started</a>
                 </div>
             </div>
         </div>
-        
+
         <!-- Slide 3: Academic Research -->
-        <div class="slide" style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="slide"
+            style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
             <div class="slide-content">
                 <h1>Academic Research & Technical Writing</h1>
-                <p>Professional support for scholars and institutions in thesis and dissertation research, data analysis, and academic writing to meet global publishing standards.</p>
+                <p>Professional support for scholars and institutions in thesis and dissertation research, data
+                    analysis, and academic writing to meet global publishing standards.</p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn primary-btn">Learn More</a>
                     <a href="#contact" class="btn secondary-btn">Get Started</a>
                 </div>
             </div>
         </div>
-        
+
         <!-- Slide 4: Strategic Research -->
-        <div class="slide" style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="slide"
+            style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
             <div class="slide-content">
                 <h1>Strategic Research & Policy Advisory</h1>
-                <p>Market research, feasibility studies, and policy evaluations to help shape policies and develop strategies aligned with economic trends and industry dynamics.</p>
+                <p>Market research, feasibility studies, and policy evaluations to help shape policies and develop
+                    strategies aligned with economic trends and industry dynamics.</p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn primary-btn">Learn More</a>
                     <a href="#contact" class="btn secondary-btn">Get Started</a>
                 </div>
             </div>
         </div>
-        
+
         <!-- Slide 5: Government Consultation -->
-        <div class="slide" style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80');">
+        <div class="slide"
+            style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80');">
             <div class="slide-content">
                 <h1>Government & Institutional Consultation</h1>
-                <p>Data-backed consultation services for government agencies and NGOs supporting urban planning, environmental sustainability, and public sector development initiatives.</p>
+                <p>Data-backed consultation services for government agencies and NGOs supporting urban planning,
+                    environmental sustainability, and public sector development initiatives.</p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn primary-btn">Learn More</a>
                     <a href="#contact" class="btn secondary-btn">Get Started</a>
                 </div>
             </div>
         </div>
-        
+
         <div class="slider-nav">
             <div class="slider-dot active" data-slide="0"></div>
             <div class="slider-dot" data-slide="1"></div>
@@ -656,60 +760,67 @@
         <div class="container">
             <div class="section-title">
                 <h2>What We Do</h2>
-                <p>We partner with corporate organizations, government agencies, and research institutions, providing in-depth insights that drive informed decision-making.</p>
+                <p>We partner with corporate organizations, government agencies, and research institutions, providing
+                    in-depth insights that drive informed decision-making.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card" id="service1">
                     <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Data Analytics & Business Intelligence</h3>
-                    <p>We help organizations harness the power of data by providing analytical insights that improve efficiency, predict trends, and optimize performance.</p>
+                    <p>We help organizations harness the power of data by providing analytical insights that improve
+                        efficiency, predict trends, and optimize performance.</p>
                 </div>
                 <div class="service-card" id="service2">
                     <div class="service-icon"><i class="fas fa-globe-africa"></i></div>
                     <h3>Geospatial Analysis & Environmental Research</h3>
-                    <p>Our geospatial services provide critical insights for environmental research, urban planning, and resource management using GIS and remote sensing.</p>
+                    <p>Our geospatial services provide critical insights for environmental research, urban planning, and
+                        resource management using GIS and remote sensing.</p>
                 </div>
                 <div class="service-card" id="service3">
                     <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Academic Research & Technical Writing</h3>
-                    <p>We provide professional support in thesis and dissertation research, data analysis, and academic writing for scholars and institutions.</p>
+                    <p>We provide professional support in thesis and dissertation research, data analysis, and academic
+                        writing for scholars and institutions.</p>
                 </div>
                 <div class="service-card" id="service4">
                     <div class="service-icon"><i class="fas fa-chess"></i></div>
                     <h3>Strategic Research & Policy Advisory</h3>
-                    <p>We conduct market research, feasibility studies, and policy evaluations to help shape policies and develop strategies.</p>
+                    <p>We conduct market research, feasibility studies, and policy evaluations to help shape policies
+                        and develop strategies.</p>
                 </div>
                 <div class="service-card" id="service5">
                     <div class="service-icon"><i class="fas fa-landmark"></i></div>
                     <h3>Government & Institutional Consultation</h3>
-                    <p>We provide data-backed consultation services to government agencies and NGOs supporting urban planning and sustainability initiatives.</p>
+                    <p>We provide data-backed consultation services to government agencies and NGOs supporting urban
+                        planning and sustainability initiatives.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text" id="aboutText">
-                    <h2>Who We Are</h2>
-                    <p>JOMCONSULT is a research-driven consulting firm specializing in data analytics, geospatial intelligence, academic research, and strategic advisory services.</p>
-                    <p>Our approach is built on the power of data, transforming complex information into practical strategies that help organizations solve challenges, optimize operations, and create lasting impact.</p>
-                    <p>Whether it's delivering business intelligence, urban research, or academic consultation, we ensure that every solution is backed by rigorous analysis and tailored to the needs of our clients.</p>
-                </div>
-                <div class="about-image" id="aboutImage">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="JOMCONSULT Team">
-                </div>
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text" id="aboutText">
+                <h2>Who We Are</h2>
+                <p>JOMCONSULT is a research-driven consulting firm specializing in data analytics, geospatial intelligence, academic research, and strategic advisory services.</p>
+                <p>Our approach is built on the power of data, transforming complex information into practical strategies that help organizations solve challenges, optimize operations, and create lasting impact.</p>
+                <p>Whether it's delivering business intelligence, urban research, or academic consultation, we ensure that every solution is backed by rigorous analysis and tailored to the needs of our clients.</p>
+            </div>
+            <div class="about-image" id="aboutImage">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="JOMCONSULT Team">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- CTA Section -->
     <section class="cta" id="cta">
         <div class="container">
             <h2>Ready to Transform Your Data into Strategic Insights?</h2>
-            <p>Partner with us to leverage research expertise with real-world applications, delivering insights that drive progress and inform policies.</p>
+            <p>Partner with us to leverage research expertise with real-world applications, delivering insights that
+                drive progress and inform policies.</p>
             <a href="#contact" class="btn primary-btn">Contact Us Today</a>
         </div>
     </section>
@@ -720,7 +831,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>JOMCONSULT</h3>
-                    <p>Research-driven consulting firm specializing in data analytics, geospatial intelligence, and strategic advisory services.</p>
+                    <p>Research-driven consulting firm specializing in data analytics, geospatial intelligence, and
+                        strategic advisory services.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Services</h3>
@@ -753,26 +865,26 @@
             const dots = document.querySelectorAll('.slider-dot');
             let currentSlide = 0;
             const slideCount = slides.length;
-            
+
             // Show first slide
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
-            
+
             // Auto slide change
             const changeSlide = () => {
                 slides[currentSlide].classList.remove('active');
                 dots[currentSlide].classList.remove('active');
-                
+
                 currentSlide = (currentSlide + 1) % slideCount;
-                
+
                 slides[currentSlide].classList.add('active');
                 dots[currentSlide].classList.add('active');
-                
+
                 // Reset animation for new slide
                 const slideContent = slides[currentSlide].querySelector('.slide-content');
                 const p = slideContent.querySelector('p');
                 const buttons = slideContent.querySelector('.hero-buttons');
-                
+
                 p.style.animation = 'none';
                 buttons.style.animation = 'none';
                 void p.offsetWidth; // Trigger reflow
@@ -780,40 +892,40 @@
                 p.style.animation = 'fadeInUp 1s ease-out 0.3s forwards';
                 buttons.style.animation = 'fadeInUp 1s ease-out 0.6s forwards';
             };
-            
+
             let slideInterval = setInterval(changeSlide, 5000);
-            
+
             // Dot navigation
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     clearInterval(slideInterval);
-                    
+
                     slides[currentSlide].classList.remove('active');
                     dots[currentSlide].classList.remove('active');
-                    
+
                     currentSlide = index;
-                    
+
                     slides[currentSlide].classList.add('active');
                     dots[currentSlide].classList.add('active');
-                    
+
                     // Reset animation for clicked slide
                     const slideContent = slides[currentSlide].querySelector('.slide-content');
                     const p = slideContent.querySelector('p');
                     const buttons = slideContent.querySelector('.hero-buttons');
-                    
+
                     p.style.animation = 'none';
                     buttons.style.animation = 'none';
                     void p.offsetWidth; // Trigger reflow
                     void buttons.offsetWidth; // Trigger reflow
                     p.style.animation = 'fadeInUp 1s ease-out 0.3s forwards';
                     buttons.style.animation = 'fadeInUp 1s ease-out 0.6s forwards';
-                    
+
                     // Restart auto slide
                     slideInterval = setInterval(changeSlide, 5000);
                 });
             });
         };
-        
+
         // Intersection Observer for scroll animations
         const animateOnScroll = () => {
             const observer = new IntersectionObserver((entries) => {
@@ -826,31 +938,31 @@
             }, {
                 threshold: 0.1
             });
-            
+
             // Observe service cards
             document.querySelectorAll('.service-card').forEach(card => {
                 observer.observe(card);
             });
-            
+
             // Observe about section
             const aboutText = document.getElementById('aboutText');
             const aboutImage = document.getElementById('aboutImage');
             if (aboutText) observer.observe(aboutText);
             if (aboutImage) observer.observe(aboutImage);
-            
+
             // Observe CTA section
             const ctaSection = document.getElementById('cta');
             if (ctaSection) observer.observe(ctaSection);
-            
+
             // Observe footer columns
             document.querySelectorAll('.footer-column').forEach(column => {
                 observer.observe(column);
             });
         };
-        
+
         // Back to top button functionality
         const backToTopButton = document.getElementById('backToTop');
-        
+
         backToTopButton.addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({
@@ -858,7 +970,7 @@
                 behavior: 'smooth'
             });
         });
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('visible');
@@ -866,15 +978,15 @@
                 backToTopButton.classList.remove('visible');
             }
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -884,7 +996,7 @@
                 }
             });
         });
-        
+
         // Initialize animations when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
             heroSlider();
@@ -892,4 +1004,5 @@
         });
     </script>
 </body>
+
 </html>
